@@ -32,7 +32,7 @@ bool initialize_sdl()
     }
 
     // Create a window
-    window = SDL_CreateWindow("Asteroids", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
+    window = SDL_CreateWindow("AsteroidZ", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
     if (window == NULL)
     {
         SDL_Log("Failed to create SDL window: %s", SDL_GetError());
