@@ -129,8 +129,14 @@ void render()
 void update()
 {
     // Update ship position
-    shipX += shipVelX;
-    shipY += shipVelY;
+    if (shipX + shipVelX >= 0 && shipX <= SCREEN_WIDTH - SHIP_SIZE - shipVelX) {
+        shipX += shipVelX;
+    }
+    if (shipY + shipVelY >= 0 && shipY <= SCREEN_HEIGHT - SHIP_SIZE - shipVelY) {
+        shipY += shipVelY;
+    }
+
+    SDL_Log("shipX: %d, shipY: %d", shipX, shipY);
 
     // Update bullet position
     if (isBulletActive)
